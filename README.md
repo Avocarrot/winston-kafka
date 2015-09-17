@@ -6,12 +6,12 @@ A [Winston](https://github.com/winstonjs/winston) transport to log messages into
 - [kafka-node](https://github.com/SOHU-Co/kafka-node)
 
 ## Installation
-```npm install winston-kafka```
+```npm install winston-transport-kafka```
 
 ## Usage
 ```js
 var winston = require('winston');
-winston.transports.KafkaTransport = require('winston-kafka');
+winston.transports.KafkaTransport = require('winston-transport-kafka');
 
 var options = {
   topic: 'logs'
