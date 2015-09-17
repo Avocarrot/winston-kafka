@@ -1,5 +1,5 @@
 {
-  "name": "winston-kafka",
+  "name": "winston-transport-kafka",
   "description": "A Winston transport to log messages into an Apache Kafka topic.",
   "version": "0.0.1",
   "author": "Avocarrot Ltd <support@avocarrot.com>",
