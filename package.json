@@ -27,8 +27,7 @@
     "winston": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "2.2.5",
-    "should": "7.0.2"
+    "mocha": "2.2.5"
   },
   "engines": {
     "node": ">= 0.10.0"
