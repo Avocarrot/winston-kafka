@@ -36,13 +36,13 @@ var Kafka = exports.Kafka = function(options) {
   // Construct Producer
   this.producer = new kafka.HighLevelProducer(this.client, this.producerOptions);
 
+  var that = this;
   this.producer.on('ready', function() {
-    this.producerReady = true;
+    that.producerReady = true;
   });
 
   this.producer.on('error', function(error) {
-    this.producerReady = false;
-    console.log(error);
+    that.producerReady = false;
   });
 };
 
@@ -87,7 +87,6 @@ Kafka.prototype._send = function(message, callback) {
 //
 Kafka.prototype.log = function(level, msg, meta, callback) {
   var that = this;
-
   if (typeof meta === 'function' && meta()) {
     callback = meta;
     meta = {};
