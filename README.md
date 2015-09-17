@@ -11,7 +11,7 @@ A [Winston](https://github.com/winstonjs/winston) transport to log messages into
 ## Usage
 ```js
 var winston = require('winston');
-winston.transports.KafkaTransport = require('winston-transport-kafka');
+winston.transports.KafkaTransport = require('winston-transport-kafka').Kafka;
 
 var options = {
   topic: 'logs'
