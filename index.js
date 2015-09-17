@@ -7,7 +7,8 @@
 
 var util = require('util'),
   winston = require('winston'),
-  kafka = require('kafka-node');
+  kafka = require('kafka-node'),
+  Transport = winston.Transport;
 
 //
 // function Kafka (options)
@@ -33,7 +34,7 @@ var Kafka = exports.Kafka = function(options) {
   this.client = new kafka.Client(this.connectionString, this.clientId, this.zkOptions);
 
   // Construct Producer
-  this.producer = new HighLevelProducer(this.client, this.producerOptions);
+  this.producer = new kafka.HighLevelProducer(this.client, this.producerOptions);
 
   this.producer.on('ready', function() {
     this.producerReady = true;
@@ -59,7 +60,7 @@ Kafka.prototype.name = 'kafka';
 //
 Kafka.prototype._send = function(message, callback) {
 
-  var cb = (typeof callback === 'function' && callback()) ? callback : function() {};
+  var cb = (typeof callback === 'function') ? callback : function() {};
 
   if (!message) cb(new Error('No message to log'));
 
@@ -91,7 +92,7 @@ Kafka.prototype.log = function(level, msg, meta, callback) {
     callback = meta;
     meta = {};
   } else {
-    callback = (typeof callback === 'function' && callback()) ? callback : function() {};
+    callback = (typeof callback === 'function') ? callback : function() {};
   }
 
   var message = {
