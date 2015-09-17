@@ -1,0 +1,45 @@
+{
+  "name": "winston-kafka",
+  "description": "A Winston transport to log messages into an Apache Kafka topic.",
+  "version": "0.0.1",
+  "author": "Avocarrot Ltd <support@avocarrot.com>",
+  "contributors": [
+    "Panayiotis Papageorgiou <panos@avocarrot.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Avocarrot/winston-kafka"
+  },
+  "homepage": "https://github.com/Avocarrot/winston-kafka",
+  "bugs": {
+    "url": "https://github.com/Avocarrot/winston-kafka/issues"
+  },
+  "keywords": [
+    "winston",
+    "kafka",
+    "transport",
+    "logging",
+    "log"
+  ],
+  "dependencies": {
+    "kafka-node": "^0.2.28",
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "should": "7.0.2"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  }
+}
