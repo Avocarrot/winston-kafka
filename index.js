@@ -59,7 +59,7 @@ Kafka.prototype.name = 'kafka';
 //
 Kafka.prototype._send = function(message, callback) {
 
-  var cb = (typeof callback === 'function' && callback()) ? callback : function(){};
+  var cb = (typeof callback === 'function' && callback()) ? callback : function() {};
 
   if (!message) cb(new Error('No message to log'));
 
@@ -100,7 +100,7 @@ Kafka.prototype.log = function(level, msg, meta, callback) {
     meta: meta
   };
 
-  this._send(message, function(error){
+  this._send(message, function(error) {
     if (error) return callback(error);
     that.emit('logged');
     callback(null, true);
