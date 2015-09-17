@@ -1,3 +1,10 @@
+//
+// Author: Avocarrot Ltd
+// Site: https://github.com/Avocarrot/winston-kafka
+// Maintainer: Panayiotis Papageorgiou <panos@avocarrot.com>
+// License: MIT
+//
+
 var util = require('util'),
   winston = require('winston'),
   kafka = require('kafka-node');
