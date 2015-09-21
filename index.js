@@ -97,7 +97,8 @@ Kafka.prototype.log = function(level, msg, meta, callback) {
   var message = {
     msg: msg,
     level: level,
-    meta: meta
+    meta: meta,
+    timestamp: new Date().toISOString()
   };
 
   this._send(message, function(error) {
