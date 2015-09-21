@@ -1,7 +1,7 @@
 {
   "name": "winston-transport-kafka",
   "description": "A Winston transport to log messages into an Apache Kafka topic.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Avocarrot Ltd <support@avocarrot.com>",
   "contributors": [
     "Panayiotis Papageorgiou <panos@avocarrot.com>"
